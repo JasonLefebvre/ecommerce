@@ -10,6 +10,8 @@ const camera = fetch("http://localhost:3000/api/cameras/" + idProduct)
 
 camera.then( (response) => response.json()).then( (element) =>{
 
+    document.querySelector("title").innerHTML = "Orinoco - " + element.name
+
     let titleProduct = document.createElement("h1");
     titleProduct.innerHTML = element.name;
 
@@ -58,7 +60,7 @@ camera.then( (response) => response.json()).then( (element) =>{
     price.innerHTML = "Prix : " + element.price + " €"
 
     let buyButton = document.createElement("button");
-    buyButton.innerHTML = "Acheter"
+    buyButton.innerHTML = "Ajouter au panier"
 
     let main = document.querySelector('.main_product');
 
@@ -68,4 +70,8 @@ camera.then( (response) => response.json()).then( (element) =>{
     main.appendChild(divParameters);
     main.appendChild(price);
     main.appendChild(buyButton);
+
+    document.querySelector("option").addEventListener("click", () => {
+        console.log("test")
+    })
 })
