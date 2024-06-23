@@ -7,7 +7,7 @@ home.addEventListener("click", function toHome() {
 
 const storage = JSON.parse(localStorage.getItem("cart"));
 
-let main_cart = document.querySelector(".main_cart");
+let articles = document.querySelector(".articles");
 
 if (storage.length > 0) {
     
@@ -38,7 +38,7 @@ if (storage.length > 0) {
 
         // Faire pour changer la quantité et supprimer ????
 
-        main_cart.appendChild(article);
+        articles.appendChild(article);
     })
 }
 

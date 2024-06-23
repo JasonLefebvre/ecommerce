@@ -11,6 +11,7 @@
 body {
     margin: 0;
     font-family: "poppins";
+    background-color: #d0fffa;
 }
 
 .navbar a {
@@ -22,7 +23,7 @@ body {
 
 .navbar, .footer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: #7EB6C6;
@@ -38,7 +39,6 @@ body {
     justify-content: space-between;
     height: 100vh;
     font-family: "poppins";
-    background-color: #d0fffa;
 }
 
 .main {
@@ -128,7 +128,34 @@ select, input {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: fit-content;
+    padding: 10px
+}
+
+.main_cart {
+    width: 100%;
+    display: flex;
+}
+
+.articles {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px 10px 10px;
+}
+
+.buy {
+    height: 100%;
+    width: 50%;
+}
+
+.article-data {
+    height: 100%;
+    width: 50%;
     padding: 1rem;
-    width: 80%;
+    display: flex;
 }
